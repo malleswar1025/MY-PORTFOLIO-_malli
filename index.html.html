@@ -898,11 +898,13 @@
                 transition: all 0.3s ease;
                 z-index: 999;
                 backdrop-filter: blur(10px);
+                pointer-events: none;
             }
 
             .nav-links.active {
                 transform: translateY(0);
                 opacity: 1;
+                pointer-events: auto;
             }
 
             .menu-toggle {
@@ -1258,39 +1260,46 @@
     </section>
 
     <!-- Tools Section -->
-    <section id="tools">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tools I Use</h2>
+   <section id="tools">
+    <div class="container">
+        <div class="section-title">
+            <h2>Tools I Use</h2>
+        </div>
+        <div class="tools-grid">
+            <!-- Adobe Premiere Pro -->
+            <div class="tool-item">
+                <div class="tool-icon">
+                    <img src="ad.png" alt="Adobe Premiere Pro" class="tool-logo">
+                </div>
+                <h3>Adobe Premiere Pro</h3>
             </div>
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-adobe"></i>
-                    </div>
-                    <h3>Adobe Premiere Pro</h3>
+            
+            <!-- Adobe Photoshop -->
+            <div class="tool-item">
+                <div class="tool-icon">
+                    <img src="ps.png" alt="Adobe Photoshop" class="tool-logo">
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-adobe"></i>
-                    </div>
-                    <h3>Adobe Photoshop</h3>
+                <h3>Adobe Photoshop</h3>
+            </div>
+            
+            <!-- DaVinci Resolve -->
+            <div class="tool-item">
+                <div class="tool-icon">
+                    <img src="DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" class="tool-logo">
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>DaVinci Resolve</h3>
+                <h3>DaVinci Resolve</h3>
+            </div>
+            
+            <!-- CapCut -->
+            <div class="tool-item">
+                <div class="tool-icon">
+                    <img src="capcut-logo-hd.png" alt="CapCut" class="tool-logo">
                 </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3>CapCut</h3>
-                </div>
+                <h3>CapCut</h3>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact">
