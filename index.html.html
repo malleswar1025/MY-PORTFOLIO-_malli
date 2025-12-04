@@ -679,52 +679,101 @@
             transform: scale(1.1);
         }
 
-        /* Tools */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2.5rem;
-            text-align: center;
-        }
+      /* Tools Section */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    text-align: center;
+}
 
-        .tool-item {
-            background: var(--card-bg);
-            padding: 2.5rem 1.5rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
+.tool-item {
+    background: var(--card-bg);
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
 
-        .tool-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
+.tool-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
 
-        .tool-item:hover::before {
-            left: 100%;
-        }
+.tool-item:hover::before {
+    left: 100%;
+}
 
-        .tool-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--glow);
-        }
+.tool-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glow);
+}
 
-        .tool-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--accent), var(--highlight));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* CHANGED: Updated .tool-icon for logo images */
+.tool-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Remove the gradient text styles */
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+/* NEW: Styles for the logo images */
+.tool-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(30%) brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover .tool-logo {
+    filter: grayscale(0%) brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .tool-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .tool-item {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tool-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
 
         /* Contact Form */
         .contact-container {
@@ -1192,66 +1241,74 @@
                 </div>
                 
                 <!-- Poster Designs - All in 16:9 with object-fit: cover -->
-                <div class="portfolio-item poster" data-category="poster" data-original-src="1.png">
-                    <img src="1.png" alt="Poster Design 1">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/18SIeWQUVDS6tzWW_XSoc1OY_MVSyZfnT=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/18SIeWQUVDS6tzWW_XSoc1OY_MVSyZfnT=w500" alt="Poster Design 1">
                     <div class="portfolio-overlay">
-                        <h3>Short Film Poster</h3>
+                        <h3>Color Grading</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
                 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="2.png">
-                    <img src="2.png" alt="Poster Design 2">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/18rfIHiJJ8kbtUjaKyS5HXzixePexq6kV=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/18rfIHiJJ8kbtUjaKyS5HXzixePexq6kV=w500" alt="Poster Design 2">
                     <div class="portfolio-overlay">
-                        <h3>Character Poster</h3>
+                        <h3>Thumbnail Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
                 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="3.png">
-                    <img src="3.png" alt="Poster Design 3">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/19KRlOTy3sKaMM0ZckW74NEauRVQL5DZY=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/19KRlOTy3sKaMM0ZckW74NEauRVQL5DZY=w500" alt="Poster Design 3">
                     <div class="portfolio-overlay">
                         <h3>Title Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
                 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="4.png">
-                    <img src="4.png" alt="Poster Design 4">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/1A33KGHMi_1ufFdAABIBr-yrYiAtRJ6OA=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/1A33KGHMi_1ufFdAABIBr-yrYiAtRJ6OA=w500" alt="Poster Design 4">
                     <div class="portfolio-overlay">
                         <h3>Social Media Promotion</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="5.png">
-                    <img src="5.png" alt="Poster Design 5">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/1FrWGol_3F9Gy8bNF7eZ8OYWGjhXj018J=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/1FrWGol_3F9Gy8bNF7eZ8OYWGjhXj018J=w500" alt="Poster Design 5">
                     <div class="portfolio-overlay">
                         <h3>Movie Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="6.png">
-                    <img src="6.png" alt="Poster Design 6">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/1Gd0l_u1pjwIkSpYSX_1DktpX84A7iRxF=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/1Gd0l_u1pjwIkSpYSX_1DktpX84A7iRxF=w500" alt="Poster Design 6">
                     <div class="portfolio-overlay">
-                        <h3>Character Art</h3>
+                        <h3>Movie Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="7.png">
-                    <img src="7.png" alt="Poster Design 7">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/1pWKlnfNPn7DNHs6Ti_Qg6wrNuTSUzpTT=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/1pWKlnfNPn7DNHs6Ti_Qg6wrNuTSUzpTT=w500" alt="Poster Design 7">
                     <div class="portfolio-overlay">
-                        <h3>Square Poster</h3>
+                        <h3>Movie Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item poster" data-category="poster" data-original-src="8.png">
-                    <img src="8.png" alt="Poster Design 8">
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/1sawyzrQEyQC0owI4UjRXndv97aJr-OQ9=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/1sawyzrQEyQC0owI4UjRXndv97aJr-OQ9=w500" alt="Poster Design 8">
                     <div class="portfolio-overlay">
                         <h3>Wide Format Poster</h3>
+                        <p>Publicity Design</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item poster" data-category="poster" data-original-src="https://lh3.googleusercontent.com/d/13P-evmT3_Bm3m97rIOpSv3zi2Wbnsogh=w1000">
+                    <img src="https://lh3.googleusercontent.com/d/13P-evmT3_Bm3m97rIOpSv3zi2Wbnsogh=w500" alt="Poster Design 9">
+                    <div class="portfolio-overlay">
+                        <h3>Square Poster</h3>
                         <p>Publicity Design</p>
                     </div>
                 </div>
