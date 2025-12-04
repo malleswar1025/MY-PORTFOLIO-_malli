@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "S S N MALLESWAR - Video Editor & Content Creator Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000 || python3 -m http.server 3000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": [
+    "portfolio",
+    "video-editor",
+    "content-creator"
+  ],
+  "author": "S S N MALLESWAR",
+  "license": "ISC"
+}
